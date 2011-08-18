@@ -1,0 +1,2 @@
+This is the source code of middle layer.
+It is not a maven project, and there are numbers of jar files needed to be added into build-path. So I directly commit the whole project file, including all the required jar files.

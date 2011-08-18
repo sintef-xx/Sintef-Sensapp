@@ -1,0 +1,185 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>envision</groupId>
+	<artifactId>sensor-portlet</artifactId>
+	<version>0.3</version>
+	<packaging>war</packaging>
+	<name>The Resource Module</name>
+	<description>The Resource Portlet is representing content from a Java Content Repository</description>
+
+	<properties>
+		<liferay.deploy.dir>D:\study\liferay\liferay-portal-6.0.5\deploy</liferay.deploy.dir>
+		<jetspeed.deploy.dir>C:\Java\Apache\Jetspeed-2.2.1-minimal\webapps\jetspeed\WEB-INF\deploy</jetspeed.deploy.dir>
+		<version.dwr>3.0-SNAPSHOT</version.dwr>
+		<version.rapi>0.3-SNAPSHOT</version.rapi>
+		<skipTests>true</skipTests>
+	</properties>
+
+	<dependencies>
+
+		<!-- JCR dependencies -->
+
+		<dependency>
+			<groupId>de.ifgi.envision</groupId>
+			<artifactId>resource-model</artifactId>
+			<version>${version.rapi}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.ifgi.envision</groupId>
+			<artifactId>resource-actions</artifactId>
+			<version>${version.rapi}</version>
+		</dependency>
+
+
+<dependency>
+    <groupId>javax.annotation</groupId>
+    <artifactId>jsr250-api</artifactId>
+    <version>1.0</version>
+</dependency>
+
+
+
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+
+		</dependency>
+		<dependency>
+			<groupId>javax.jcr</groupId>
+			<artifactId>jcr</artifactId>
+			<version>2.0</version>
+
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+			<!-- not provided: -> java.lang.NoClassDefFoundError: javax/servlet/jsp/jstl/core/Config -->
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc-portlet</artifactId>
+			<version>3.0.5.RELEASE</version>
+
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.8</version>
+
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.portals.pluto</groupId>
+			<artifactId>pluto-taglib</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>de.ifgi.envision</groupId>
+			<artifactId>portlets-dwrDispatcher</artifactId>
+			<version>0.3-SNAPSHOT</version>
+		</dependency> -->
+		
+		<dependency>
+			<groupId>de.ifgi.envision</groupId>
+			<artifactId>dwr</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			 <scope>system</scope>
+          	<systemPath>D:\study\oslo\back\dwr-0.1-SNAPSHOT.jar</systemPath>		
+		</dependency>
+	</dependencies>
+	<build>
+		<!-- don't use this, does somehow prevent deployment in liferay -->
+		<!-- <finalName>resource-portlet</finalName> -->
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3</version>
+					<configuration>
+						<source>1.5</source>
+						<target>1.5</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<!-- <testResources> -->
+		<!-- <testResource> -->
+		<!-- <directory>src/main/webapp/WEB-INF</directory> -->
+		<!-- </testResource> -->
+		<!-- </testResources> -->
+
+	</build>
+	<repositories>
+		<repository>
+			<id>java.net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+		<repository>
+			<id>envision-snapshots</id>
+			<url>http://kenai.com/svn/envision~maven/</url>
+		</repository>
+	</repositories>
+
+	<profiles>
+		<profile>
+			<id>ant</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<configuration>
+									<tasks>
+										<copy todir="${liferay.deploy.dir}" file="target/sensor-portlet-0.3.war" />
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>   

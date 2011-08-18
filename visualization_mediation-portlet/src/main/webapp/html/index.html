@@ -1,0 +1,59 @@
+
+<!--  adds portlet information to request object, see http://blogs.sun.com/deepakg/entry/jsr286_defineobjects_tag -->
+<link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.3.1/resources/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="/resource-portlet-0.3/static/res/res_portlet.css" />
+
+<!-- <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.3.1/adapter/ext/ext-base.js"></script> -->
+<!-- <script type="text/javascript" src="http://extjs.cachefly.net/ext-3.3.1/ext-all.js"></script> -->
+<!-- <script type='text/javascript' src="/resource-portlet-0.3/dwr/engine.js"/></script> -->
+<!-- <script type='text/javascript' src="/resource-portlet-0.3/dwr/util.js"/></script> -->
+<!-- <script type='text/javascript' src="/resource-portlet-0.3/dwr/interface/resources.js"> </script>  -->
+<!-- <script src="/resource-portlet-0.3/static/res/ZeroClipboard.js" type="text/javascript"> </script>  -->
+<!-- <script src="/resource-portlet-0.3/static/res/res_portlet.js" type="text/javascript"> </script>  -->
+
+
+<script type="text/javascript" src="/resource-portlet-0.3/static/res/LAB.min.js"></script>
+<script type="text/javascript"> 
+	
+	
+	$LAB.script("http://extjs.cachefly.net/ext-3.3.1/adapter/ext/ext-base.js").wait()
+		.script("http://extjs.cachefly.net/ext-3.3.1/ext-all.js").wait() 
+		.script("/resource-portlet-0.3/dwr/engine.js").wait() 
+		.script("/resource-portlet-0.3/dwr/interface/resources.js").wait() 
+ 		.script("/resource-portlet-0.3/static/res/res_portlet.js").wait() 	
+		.script("/resource-portlet-0.3/dwr/util.js").wait()
+ 		.script("/resource-portlet-0.3/static/res/ZeroClipboard.js").wait(function() {
+ 			env.res.init(); 
+ 		})
+ 		;  
+	
+	$LAB.setGlobalDefaults({AllowDuplicates:false, UseLocalXHR:true, UseCachePreload: true})
+</script>
+
+
+
+<script type="text/javascript">/*<![CDATA[*/
+	var resourceSendingURL="http://localhost:8080/web/guest/annotation?p_auth=DyQ4CVJr&amp;p_p_id=ResourceManager_WAR_resourceportlet03&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_ResourceManager_WAR_resourceportlet03_action=resource-sending";
+	</script> 
+	
+	<div style="margin: 100px; width: 300px">
+	
+	
+    <div id="rmpContent">
+        <div id="rmpList">
+
+        </div>
+        <div id="rmpSecondary">
+			<div id="rmpInfo">
+            	
+			</div>
+        </div>
+    </div>
+    </div>
+
+<div id="import-dialog" class="x-hidden">
+
+    <div class="x-window-header">Import Resource</div>
+
+</div>
+

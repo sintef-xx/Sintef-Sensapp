@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Stateful Array Grid Example</title>
+
+    <!-- ** CSS ** -->
+    <!-- base library -->
+	<link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-3.2.1/resources/css/ext-all.css" />
+	<script type="text/javascript" src="http://extjs.cachefly.net/ext-3.2.1/adapter/ext/ext-base.js"></script>
+	<script type="text/javascript" src="http://extjs.cachefly.net/ext-3.2.1/ext-all.js"></script>
+	
+    
+
+    <style type=text/css>
+/* style rows on mouseover */
+.x-grid3-row-over .x-grid3-cell-inner {
+	font-weight: bold;
+}
+
+#rmpList .x-panel-body{
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+
+.res-wrap {
+	margin: 5px;
+	padding: 1px;
+	padding-left: 5px; 
+	border: thin solid #EEEEEE;
+	width: 90%;
+}
+#res-send-button {
+	float: right; 
+	width: 9%; 
+}
+
+.res-row {
+	margin-bottom: 3px;
+}
+
+.res-name {
+	font-weight: bold;
+	font-size: small;
+}
+
+.res-state {
+	float: right;
+	margin-right: 30px; 
+	font-style: italic;
+	font-size: x-small;
+}
+
+.res-type {
+	font-size: x-small;
+}
+
+.res-tags {
+	font-size: x-small;
+}
+
+#rmpList .x-view-over {
+	background: #EFEFFF;
+}
+
+#rmpList .x-view-selected {
+	background: #EFEFFF;
+	border: 1px solid #99bbe8;
+}
+
+#rmpList .x-view-selected .thumb {
+	background: transparent;
+}
+
+
+#rmpActions {
+	height: 30px;
+	background: gray;
+}
+</style>
+<!--	<script type="text/javascript" src="SearchField.js"></script>-->
+    <script type="text/javascript" src="resources.js"></script>
+    <script type="text/javascript" src="resourceView.js"></script>
+    <script type="text/javascript" src="plugins.js"></script>
+    
+
+</head>
+
+<body>
+&nbsp; 
+
+
+<div  id="rmpContent">
+<div id="res-send-button"> </div>
+	
+	<div id="rmpList">
+		<div id="rmpSearch">
+		
+		</div>
+	</div>
+		
+</div> 
+
+</body>
+</html>

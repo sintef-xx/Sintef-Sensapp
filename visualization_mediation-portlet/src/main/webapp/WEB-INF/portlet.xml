@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd 
+	http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	
+	
+	
+	<portlet>
+		
+		<portlet-name>SensorManager</portlet-name>
+		<display-name>Sensor Manager</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<portlet-info>
+			<title>sensorList</title>
+			<short-title>sensorList</short-title>
+			<keywords>envision, sensor</keywords>
+			
+		</portlet-info>
+		
+		<supported-processing-event>
+            <qname xmlns:x="http://liferay.com/events">x:envision.resource.sendResource</qname>
+        </supported-processing-event>	
+        
+        <supported-publishing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.resource.sendResource</qname>
+		</supported-publishing-event>
+		
+		<supported-publishing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.showOneMap</qname>
+		</supported-publishing-event>	
+		<supported-publishing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.showAllMap</qname>
+		</supported-publishing-event>	
+		<supported-publishing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sosAction</qname>
+		</supported-publishing-event>	
+		<supported-publishing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sesAction</qname>
+		</supported-publishing-event>	
+		
+	</portlet>
+	
+	<portlet>
+		<portlet-name>SensorMap</portlet-name>
+		<display-name>Sensor Map</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<portlet-info>
+			<title>SensorMap</title>
+			<short-title>SensorMap</short-title>
+			<keywords>envision, map, sensor</keywords>
+			
+		</portlet-info>
+		 <supported-processing-event>
+            <qname xmlns:x="http://liferay.com/events">x:envision.sensor.showOneMap</qname>
+        </supported-processing-event>			
+		<supported-processing-event>
+            <qname xmlns:x="http://liferay.com/events">x:envision.sensor.showAllMap</qname>
+        </supported-processing-event>
+		<supported-publishing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sosAction</qname>
+		</supported-publishing-event>	
+		<supported-publishing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sesAction</qname>
+		</supported-publishing-event>	
+	</portlet>
+	
+	<portlet>
+		<portlet-name>SensorSOS</portlet-name>
+		<display-name>Sensor SOS</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<portlet-info>
+			<title>SensorSOS</title>
+			<short-title>SensorSOS</short-title>
+			<keywords>envision, sos, sensor</keywords>
+			
+		</portlet-info>
+		 
+		<supported-processing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sosAction</qname>
+		</supported-processing-event>	
+	
+	</portlet>
+	
+	<portlet>
+		<portlet-name>SensorSES</portlet-name>
+		<display-name>Sensor SES</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<portlet-info>
+			<title>SensorSES</title>
+			<short-title>SensorSES</short-title>
+			<keywords>envision, ses, sensor</keywords>
+			
+		</portlet-info>
+		 
+		<supported-processing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sesAction</qname>
+		</supported-processing-event>	
+	
+	</portlet>
+	
+	<portlet>
+		<portlet-name>mediation</portlet-name>
+		<display-name>mediation</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<portlet-info>
+			<title>mediation</title>
+			<short-title>mediation</short-title>
+			<keywords>envision, mediation</keywords>
+			
+		</portlet-info>
+		 
+		<supported-processing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.resource.sendResource</qname>
+		</supported-processing-event>	
+		<supported-processing-event>
+			<qname xmlns:x="http://liferay.com/events">x:envision.resource.mediation</qname>
+		</supported-processing-event>	
+	
+	</portlet>
+	
+	<portlet>
+		<portlet-name>SimpleResourceDisplay2</portlet-name>
+		<display-name>Simple Resource Display2</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<portlet-info>
+			<title>Simple Resource Display2</title>
+			<short-title>Simple Resource Display2</short-title>
+			<keywords>jcr, envision, resource</keywords>
+			
+		</portlet-info>
+		 <supported-processing-event>
+            <qname xmlns:x="http://liferay.com/events">x:envision.resource.sendResource</qname>
+        </supported-processing-event>			
+
+	
+	</portlet>
+	
+	<user-attribute>
+		<description>User E-Mail</description>
+		<name>user.home-info.online.email</name>
+	</user-attribute>
+	
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:envision.sensor.showOneMap</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:envision.sensor.showAllMap</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sosAction</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:envision.sensor.sesAction</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:envision.resource.sendResource</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:envision.resource.refresh</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>		
+	<event-definition>
+		<qname xmlns:x="http://liferay.com/events">x:envision.resource.mediation</qname>
+		<value-type>java.lang.String</value-type>
+	</event-definition>	
+</portlet-app> 
